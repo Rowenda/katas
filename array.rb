@@ -33,3 +33,17 @@ def anagram?(word1, word2)
   letters2 = word2.downcase.chars
   letters1.tally == letters2.tally
 end
+
+# 🔁 Exercice 4 : Détecter un palindrome
+# Manipuler la chaîne en array (pas d’appel direct à .reverse sur la string).
+# Bien gérer les majuscules/minuscules et les espaces.
+
+def palindrome?(string)
+  letters = string.downcase.gsub(" ", "").chars
+  letters == letters.reverse
+end
+
+palindrome?("kayak")        # => true
+palindrome?("Radar")        # => true
+palindrome?("Ruby")         # => false
+palindrome?("Esope reste ici et se repose") # => true
