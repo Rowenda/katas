@@ -43,7 +43,12 @@ def palindrome?(string)
   letters == letters.reverse
 end
 
-palindrome?("kayak")        # => true
-palindrome?("Radar")        # => true
-palindrome?("Ruby")         # => false
-palindrome?("Esope reste ici et se repose") # => true
+# Écrire une méthode qui compte les occurrences de chaque mot dans une phrase
+def word_count(phrase)
+  phrase.split.tally
+end
+
+# Retourner seulement les nombres pairs d'un array
+def even_numbers(numbers)
+  numbers.select { |number| number.even? }
+end
