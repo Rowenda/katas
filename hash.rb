@@ -19,3 +19,10 @@ def fibonacci(n, memo = {})
   return n if n < 2
   memo[n] ||= fibonacci(n-1, memo) + fibonacci(n-2, memo)
 end
+
+# Inverser les clés et valeurs d'un hash
+def invert_hash(hash)
+  new_hash = {}
+  hash.each { |k,v| new_hash[v] = k }
+  new_hash
+end

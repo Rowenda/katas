@@ -52,3 +52,13 @@ end
 def even_numbers(numbers)
   numbers.select { |number| number.even? }
 end
+
+def binary_search(array, target)
+  answer = nil
+  array.each_with_index do |value, index |
+    if value == target
+      answer = index
+    end
+  end
+  answer
+end
